@@ -1,0 +1,9 @@
+#This is the file script that should be saved on /usr/local/bin/ to be automatically run.
+    #!/bin/bash
+    echo "Starting system update"
+    sudo apt update
+    echo "Upgrading installed packages"
+    sudo apt upgrade -y
+    echo "Logging update and upgrade details"
+    sudo apt update &> update_log.txt
+    sudo apt upgrade -y &>> update_log.txt
